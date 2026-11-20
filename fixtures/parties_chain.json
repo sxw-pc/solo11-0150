@@ -1,0 +1,18 @@
+{
+  "source_id": "parties-chain-v1",
+  "business_time": 10,
+  "registrations": [
+    {"id": "reg-a", "party": "stall-a-owner", "kind": "trader", "independent": true,
+     "stall": "stall-a", "owner": "op-a", "registration": "biz-a", "digest": "a-bytes",
+     "starts": 0, "ends": 100},
+    {"id": "reg-b", "party": "stall-b-owner", "kind": "trader", "independent": true,
+     "stall": "stall-b", "owner": "op-b", "registration": "biz-b", "digest": "b-bytes",
+     "starts": 0, "ends": 100},
+    {"id": "reg-c", "party": "stall-c-owner", "kind": "trader", "independent": true,
+     "stall": "stall-c", "owner": "op-c", "registration": "biz-c", "digest": "c-bytes",
+     "starts": 0, "ends": 100},
+    {"id": "reg-d", "party": "purchaser-d", "kind": "purchaser", "independent": true,
+     "stall": null, "owner": "op-d", "registration": "biz-d", "digest": "d-bytes",
+     "starts": 0, "ends": 100}
+  ]
+}

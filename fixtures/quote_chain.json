@@ -1,0 +1,19 @@
+{
+  "source_id": "quotes-chain-v1",
+  "business_time": 10,
+  "licences": [
+    {"id": "lic-a", "stall": "stall-a", "region": "north", "product": "tomato", "starts": 0, "ends": 30},
+    {"id": "lic-b", "stall": "stall-b", "region": "north", "product": "tomato", "starts": 0, "ends": 30},
+    {"id": "lic-c", "stall": "stall-c", "region": "north", "product": "tomato", "starts": 0, "ends": 30}
+  ],
+  "quotes": [
+    {"id": "q-a100", "stall": "stall-a", "licence_id": "lic-a", "region": "north",
+     "product": "tomato", "day": 10, "version": 1, "price": 100, "digest": "qa-bytes"},
+    {"id": "q-b150", "stall": "stall-b", "licence_id": "lic-b", "region": "north",
+     "product": "tomato", "day": 10, "version": 1, "price": 150, "digest": "qb150-bytes"},
+    {"id": "q-b160", "stall": "stall-b", "licence_id": "lic-b", "region": "north",
+     "product": "tomato", "day": 10, "version": 2, "price": 160, "digest": "qb160-bytes"},
+    {"id": "q-c200", "stall": "stall-c", "licence_id": "lic-c", "region": "north",
+     "product": "tomato", "day": 10, "version": 1, "price": 200, "digest": "qc-bytes"}
+  ]
+}

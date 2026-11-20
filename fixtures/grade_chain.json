@@ -1,0 +1,12 @@
+{
+  "source_id": "grades-chain-v1",
+  "business_time": 10,
+  "lots": [
+    {"id": "lot-chain", "origin": "farm-chain", "product": "tomato",
+     "harvest_day": 8, "quantity": 10, "expires_day": 20}
+  ],
+  "inspections": [
+    {"id": "inspect-chain", "lot_id": "lot-chain", "origin": "farm-chain",
+     "product": "tomato", "harvest_day": 8, "grade": "G1", "sampled_at": 9, "version": 1}
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "source_id": "index-chain-v1",
+  "business_time": 10,
+  "requests": [
+    {"day": 10, "product": "tomato", "grade": "G1", "min_stalls": 2, "product_line": "legal"},
+    {"day": 10, "product": "tomato", "grade": "G1", "min_stalls": 2, "product_line": "turnover"},
+    {"day": 10, "product": "tomato", "grade": "G1", "min_stalls": 2, "product_line": "procurement"}
+  ]
+}
