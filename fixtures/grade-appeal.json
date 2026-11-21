@@ -1,0 +1,11 @@
+{
+ "source_id":"assay-appeal",
+ "business_time":10,
+ "inspection":{
+   "id":"lab-letter-1","lot_id":"lot-1","origin":"farm-1",
+   "product":"tomato","harvest_day":8,"grade":"G2",
+   "sampled_at":9,"version":2
+ },
+ "lab_reading":{"uncalibrated":8,"offsets":[0,1,2]},
+ "thresholds":{"G1_min":7,"G2_min":5}
+}
