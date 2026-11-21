@@ -13,7 +13,8 @@ class MarketProofTests(unittest.TestCase):
         self.temp=tempfile.TemporaryDirectory()
         self.db=connect(Path(self.temp.name)/'case.sqlite')
         print('module_file',quote.__file__)
-        self.assertIn('solo11-0150',str(quote.__file__))
+        repo=Path(__file__).resolve().parents[1]
+        self.assertIn(str(repo),str(Path(quote.__file__).resolve()))
     def tearDown(self):
         self.db.close();self.temp.cleanup()
     def seed(self):
