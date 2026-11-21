@@ -1,0 +1,90 @@
+{
+  "source_id": "trades-v1",
+  "business_time": 10,
+  "trades": [
+    {
+      "id": "trade-1",
+      "quote_id": "q-1",
+      "stall": "stall-1",
+      "product": "tomato",
+      "grade": "G1",
+      "lot_id": "lot-1",
+      "quantity": 10,
+      "day": 10,
+      "price": 100,
+      "buyer": "buyer-1",
+      "seller": "seller-1",
+      "buyer_digest": "buyer-1-bytes",
+      "seller_digest": "seller-1-bytes",
+      "buyer_view": {
+        "lot_id": "lot-1",
+        "quantity": 10,
+        "day": 10,
+        "price": 100
+      },
+      "seller_view": {
+        "lot_id": "lot-1",
+        "quantity": 10,
+        "day": 10,
+        "price": 100
+      },
+      "settled": false
+    },
+    {
+      "id": "trade-2",
+      "quote_id": "q-2",
+      "stall": "stall-2",
+      "product": "tomato",
+      "grade": "G1",
+      "lot_id": "lot-2",
+      "quantity": 10,
+      "day": 10,
+      "price": 200,
+      "buyer": "buyer-2",
+      "seller": "seller-2",
+      "buyer_digest": "buyer-2-bytes",
+      "seller_digest": "seller-2-bytes",
+      "buyer_view": {
+        "lot_id": "lot-2",
+        "quantity": 10,
+        "day": 10,
+        "price": 200
+      },
+      "seller_view": {
+        "lot_id": "lot-2",
+        "quantity": 10,
+        "day": 10,
+        "price": 200
+      },
+      "settled": false
+    },
+    {
+      "id": "trade-3",
+      "quote_id": "q-3",
+      "stall": "stall-3",
+      "product": "tomato",
+      "grade": "G1",
+      "lot_id": "lot-3",
+      "quantity": 10,
+      "day": 10,
+      "price": 150,
+      "buyer": "buyer-3",
+      "seller": "seller-3",
+      "buyer_digest": "buyer-3-bytes",
+      "seller_digest": "seller-3-bytes",
+      "buyer_view": {
+        "lot_id": "lot-3",
+        "quantity": 10,
+        "day": 10,
+        "price": 150
+      },
+      "seller_view": {
+        "lot_id": "lot-3",
+        "quantity": 10,
+        "day": 10,
+        "price": 150
+      },
+      "settled": false
+    }
+  ]
+}

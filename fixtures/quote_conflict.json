@@ -1,0 +1,18 @@
+{
+  "source_id": "quotes-conflict",
+  "business_time": 10,
+  "licences": [],
+  "quotes": [
+    {
+      "id": "q-4",
+      "stall": "stall-1",
+      "licence_id": "lic-1",
+      "region": "north",
+      "product": "tomato",
+      "day": 10,
+      "version": 1,
+      "price": 300,
+      "digest": "conflicting-price"
+    }
+  ]
+}

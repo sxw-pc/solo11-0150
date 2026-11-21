@@ -1,0 +1,17 @@
+{
+  "source_id": "grades-retest",
+  "business_time": 14,
+  "lots": [],
+  "inspections": [
+    {
+      "id": "retest-1",
+      "lot_id": "lot-1",
+      "origin": "farm-1",
+      "product": "tomato",
+      "harvest_day": 8,
+      "grade": "G2",
+      "sampled_at": 12,
+      "version": 2
+    }
+  ]
+}

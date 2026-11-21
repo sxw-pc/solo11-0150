@@ -1,0 +1,12 @@
+{
+  "source_id": "index-v1",
+  "business_time": 10,
+  "requests": [
+    {
+      "day": 10,
+      "product": "tomato",
+      "grade": "G1",
+      "min_stalls": 2
+    }
+  ]
+}
