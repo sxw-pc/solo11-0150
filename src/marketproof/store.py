@@ -17,6 +17,9 @@ CREATE TABLE IF NOT EXISTS trade_decision(trade_id TEXT PRIMARY KEY,status TEXT,
 CREATE TABLE IF NOT EXISTS daily_sample(id INTEGER PRIMARY KEY,day INTEGER,product TEXT,grade TEXT,trade_id TEXT,stall TEXT,price INTEGER,UNIQUE(day,product,grade,trade_id));
 CREATE TABLE IF NOT EXISTS index_release(id INTEGER PRIMARY KEY,day INTEGER,product TEXT,grade TEXT,min_stalls INTEGER,status TEXT,min_price INTEGER,max_price INTEGER,median_price REAL,stall_count INTEGER,version INTEGER,previous INTEGER);
 CREATE TABLE IF NOT EXISTS publication_receipt(id INTEGER PRIMARY KEY,release_id INTEGER,status TEXT,reason TEXT,at TEXT DEFAULT CURRENT_TIMESTAMP);
+CREATE TABLE IF NOT EXISTS cold_anchor(id INTEGER PRIMARY KEY,journey TEXT,segment TEXT,source_id TEXT,local_time INTEGER,unified_time INTEGER,offset_minutes INTEGER,business_time INTEGER,UNIQUE(journey,segment,source_id,local_time,unified_time));
+CREATE TABLE IF NOT EXISTS cold_reset_visa(id INTEGER PRIMARY KEY,journey TEXT,before_segment TEXT,after_segment TEXT,reset_at INTEGER,source_id TEXT,business_time INTEGER,UNIQUE(journey,source_id));
+CREATE TABLE IF NOT EXISTS cold_seal(id INTEGER PRIMARY KEY,journey TEXT,segment TEXT,seal_id TEXT,party TEXT,range_start INTEGER,range_end INTEGER,identity_ok INTEGER,goods_ok INTEGER,alarm_minutes INTEGER,source_id TEXT,business_time INTEGER,UNIQUE(journey,seal_id,source_id));
 """
 def connect(path):
     db=sqlite3.connect(path,isolation_level='IMMEDIATE');db.row_factory=sqlite3.Row;db.executescript(SCHEMA);return db

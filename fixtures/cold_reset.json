@@ -1,0 +1,8 @@
+{
+  "source_id": "reset-visa-run-1",
+  "journey": "cool-J1",
+  "business_time": 5,
+  "before_segment": "seg-1",
+  "after_segment": "seg-2",
+  "reset_at": 10
+}

@@ -1,0 +1,10 @@
+{
+  "source_id": "dual-anchor-run-1",
+  "journey": "cool-J1",
+  "business_time": 3,
+  "segment": "seg-1",
+  "anchors": [
+    {"local_time": 2, "unified_time": 1},
+    {"local_time": 10, "unified_time": 9}
+  ]
+}

@@ -24,6 +24,25 @@ python -m marketproof report --db state.sqlite
 
 `*-conflict.json`、`grade_late.json`、`trade_overdraw.json`、`index_sparse.json` 是改变业务结论的反例。全部来源保存在 `source` 和 `source_conflict`，含原始 JSON、SHA-256、业务时间和接收时间。同来源同内容不重复处理；异内容留冲突原文，不覆盖旧版。单次导入使用 SQLite 事务，货批占额与交易状态同事务重算。
 
+## 冷链归责采证台
+
+`cold-import` 保留记录器短表原件并只按报警总数给出 `clear` / `alarm_unattributed`，接口与旧版完全一致。报警未归责后，操作员可基于真实可取得的两套现场开两种采录工单，原件先入 `source` 再核证：
+
+```powershell
+python -m marketproof cold-anchor-import --db state.sqlite --input fixtures/cold_anchor_minus_one.json
+python -m marketproof cold-seal-import   --db state.sqlite --input fixtures/cold_seal_rear.json
+python -m marketproof cold-reset-import  --db state.sqlite --input fixtures/cold_reset.json
+python -m marketproof cold-attribute     --db state.sqlite --input '{"journey":"cool-J1"}'
+python -m marketproof cold-recommend     --db state.sqlite --input recommend.json
+```
+
+- **共用偏移**：一段设备运行内本地时钟到统一时钟只有一个未知整数偏移；双对时锚同时比对本地与统一时间，必须用同一个相容偏移重新解释全段热区，不能逐热区挑选有利偏移。责任门槛为同一连续热区内单方达到 3 分钟，分离热区不合计。
+- **双锚工单**（`cold_anchor`）：只有在全部合法解释下同一责任方都达门槛才签发凭据；热区 `[4,8)`、交接 6、偏移界 `[-1,1]` 下，-1 恰签首方、+1 恰签后方、0 双方不足。
+- **温敏封条工单**（`cold_seal`）：封条在各自时间范围内独立证明连续报警，校验身份与货品一致，不恢复记录器偏移；后方封条证明 `[6,9)` 且前方封条已证低于门槛时签后方，记录器总量不变，档案不填入 ±1。
+- **矛盾见证**：两套原件世界交集为空（或指向不同责任方）时停在 `evidence_conflict` 并给出矛盾见证，不按来源优先级写死赢家。
+- **复位签证**（`cold_reset_visa`）：到来后运行拆为两代，各自持有独立偏移；旧整段凭据保留并标 `superseded`，不假装原来未签，且后一代不得借用前一代的对时窗口。
+- **预算建议**（`cold-recommend`）：按现场可取得的见证集合（`anchor_region` / `seal_range`）与解释覆盖给建议，不机械选最近的原件。
+
 ## 独立业务决定
 
 | 子系统 | 持久化业务实体 | 独立结论 |
@@ -39,4 +58,4 @@ python -m marketproof report --db state.sqlite
 
 ## 数据边界
 
-本版只使用本地合成 JSON。跨市场运输、冷链归责、节假日基线、多实验室仲裁、期货交割、零售传导、召回触达与替代指数属于后续独立方向，当前未实现。
+本版只使用本地合成 JSON。节假日基线、多实验室仲裁、期货交割、零售传导、召回触达与替代指数属于后续独立方向，当前未实现。冷链归责的原件采录、双锚/封条核证与复位分代见上节。

@@ -1,0 +1,22 @@
+{
+  "source_id": "rear-seal-handover",
+  "journey": "cool-J1",
+  "business_time": 4,
+  "segment": "seg-1",
+  "seals": [
+    {
+      "seal_id": "seal-rear-1",
+      "party": "receiver",
+      "alarm_range": [6, 9],
+      "identity_ok": true,
+      "goods_ok": true
+    },
+    {
+      "seal_id": "seal-front-1",
+      "party": "shipper",
+      "alarm_range": [3, 5],
+      "identity_ok": true,
+      "goods_ok": true
+    }
+  ]
+}
