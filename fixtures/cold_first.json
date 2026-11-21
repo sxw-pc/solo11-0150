@@ -1,0 +1,9 @@
+{
+  "source_id": "departure-recorder",
+  "journey": "cool-J1",
+  "business_time": 1,
+  "trigger_minutes": 3,
+  "alarm_minutes": 2,
+  "custody_window": {"split_at": 6, "first": "shipper", "second": "receiver"},
+  "recorder": {"hot_on_local_clock": [4, 8], "clock_offset_bounds": [-1, 1]}
+}

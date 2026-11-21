@@ -1,0 +1,34 @@
+{
+  "source_id": "trade-overdraw",
+  "business_time": 10,
+  "trades": [
+    {
+      "id": "trade-overdraw",
+      "quote_id": "q-1",
+      "stall": "stall-1",
+      "product": "tomato",
+      "grade": "G1",
+      "lot_id": "lot-1",
+      "quantity": 95,
+      "day": 10,
+      "price": 100,
+      "buyer": "buyer-1",
+      "seller": "seller-1",
+      "buyer_digest": "buyer-1-bytes",
+      "seller_digest": "seller-1-bytes",
+      "buyer_view": {
+        "lot_id": "lot-1",
+        "quantity": 95,
+        "day": 10,
+        "price": 100
+      },
+      "seller_view": {
+        "lot_id": "lot-1",
+        "quantity": 95,
+        "day": 10,
+        "price": 100
+      },
+      "settled": false
+    }
+  ]
+}

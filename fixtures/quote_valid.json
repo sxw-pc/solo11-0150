@@ -1,0 +1,65 @@
+{
+  "source_id": "quotes-v1",
+  "business_time": 10,
+  "licences": [
+    {
+      "id": "lic-1",
+      "stall": "stall-1",
+      "region": "north",
+      "product": "tomato",
+      "starts": 0,
+      "ends": 30
+    },
+    {
+      "id": "lic-2",
+      "stall": "stall-2",
+      "region": "north",
+      "product": "tomato",
+      "starts": 0,
+      "ends": 30
+    },
+    {
+      "id": "lic-3",
+      "stall": "stall-3",
+      "region": "north",
+      "product": "tomato",
+      "starts": 0,
+      "ends": 30
+    }
+  ],
+  "quotes": [
+    {
+      "id": "q-1",
+      "stall": "stall-1",
+      "licence_id": "lic-1",
+      "region": "north",
+      "product": "tomato",
+      "day": 10,
+      "version": 1,
+      "price": 100,
+      "digest": "quote-1-bytes"
+    },
+    {
+      "id": "q-2",
+      "stall": "stall-2",
+      "licence_id": "lic-2",
+      "region": "north",
+      "product": "tomato",
+      "day": 10,
+      "version": 1,
+      "price": 200,
+      "digest": "quote-2-bytes"
+    },
+    {
+      "id": "q-3",
+      "stall": "stall-3",
+      "licence_id": "lic-3",
+      "region": "north",
+      "product": "tomato",
+      "day": 10,
+      "version": 1,
+      "price": 150,
+      "digest": "quote-3-bytes"
+    }
+  ]
+}
